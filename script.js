@@ -71,7 +71,7 @@ form.addEventListener("submit", (e) => {
     form.style.display = "none";
     successMessage.classList.add("show");
     titre.style.display = "none";
-    successMessage.innerHTML = `<h1>Salut ! <span><b>${nom.value}</b></span></h1>
+    successMessage.innerHTML = `<h1>Salut ! <span><b>${Name.value}</b></span></h1>
     <h3><b>Votre email :</b> <span>${Mail.value}</span></h3>
     <p>Nous sommes ravi de vous voir !</p>`;
   } else {
