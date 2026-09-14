@@ -33,7 +33,10 @@ Mail.addEventListener("input", () => {
   validateForm(Mail, validEmail, emailError);
 });
 PassWord.addEventListener("input", () => {
-  validateForm(PassWord, PassWord.value.length >= 6, passwordError);
+  const longueur = PassWord.value.length >= 6;
+  const contenirChifrre = /\d/.test(PassWord.value);
+  const passCorrect = longueur && contenirChifrre;
+  validateForm(PassWord, passCorrect, passwordError);
 
   if (ConfirmPassWord.value !== "") {
     const validPass = ConfirmPassWord.value === PassWord.value;
