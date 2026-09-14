@@ -58,7 +58,7 @@ form.addEventListener("submit", (e) => {
   );
   const validPass = validateForm(
     PassWord,
-    PassWord.value.length >= 6,
+    PassWord.value.length >= 6 && /\d/.test(PassWord.value),
     passwordError,
   );
   const validConfirm = validateForm(
