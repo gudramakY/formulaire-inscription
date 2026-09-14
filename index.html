@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="log">
+            <h1>Inscription</h1>
+        </div>
+
+        <!-- Le formulaire -->
+        <form id="inscriptionForm">
+            <!-- Champ Nom -->
+            <div class="form-group">
+                <label for="nom">Nom complet</label>
+                <input type="text" id="nom" placeholder="Entrez votre nom" required>
+                <div class="error-message" id="nomError">Le nom doit contenir au moins 3 caractères</div>
+            </div>
+
+            <!-- Champ Email -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="exemple@email.com" required>
+                <div class="error-message" id="emailError">Veuillez entrer un email valide (ex: nom@domaine.com)</div>
+            </div>
+
+            <!-- Champ Mot de passe -->
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" placeholder="Minimum 6 caractères" required>
+                <div class="error-message" id="passwordError">Le mot de passe doit contenir au moins 6 caractères</div>
+            </div>
+
+            <!-- Champ Confirmation -->
+            <div class="form-group">
+                <label for="confirmPassword">Confirmer le mot de passe</label>
+                <input type="password" id="confirmPassword" placeholder="Confirmez votre mot de passe" required>
+                <div class="error-message" id="confirmError">Les mots de passe ne correspondent pas</div>
+            </div>
+
+            <button type="submit">S'inscrire</button>
+        </form>
+
+        <!-- Donnees + Message de succès -->
+        <div class="success-message" id="successMessage">
+            <div class="merci-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
